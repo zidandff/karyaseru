@@ -21,8 +21,8 @@ AOS.init({
 });
 
 // Smooth scroll initialization
-var scroll = new SmoothScroll('a[href*="#"]', {
-    speed: 800,
-    easing: 'easeInQuad',
-    offset: 120
-});
+// var scroll = new SmoothScroll('a[href*="#"]', {
+//     speed: 800,
+//     easing: 'easeInQuad',
+//     offset: 120
+// });
