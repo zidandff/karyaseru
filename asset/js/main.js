@@ -12,6 +12,13 @@ document.querySelector(".navbar-toggler").addEventListener('click', ()=> {
     navbar.classList.add("scroll")
 })
 
+const navLinks = document.querySelectorAll('.nav-link')
+const section = navLinks.forEach((target)=> {
+    target.addEventListener('click', function(){
+        return this.getAttribute("href");
+    })
+})
+
 // AOS Initialization
 AOS.init({
     offset: 120,
@@ -21,8 +28,14 @@ AOS.init({
 });
 
 // Smooth scroll initialization
-// var scroll = new SmoothScroll('a[href*="#"]', {
-//     speed: 800,
-//     easing: 'easeInQuad',
-//     offset: 120
-// });
+var scroll = new SmoothScroll('a[href*="#"]', {
+    speed: 800,
+    easing: 'easeInOutCubic',
+    offset: function(){
+        if(section == "#home"){
+            return 0
+        }else {
+            return 120
+        }
+    }
+});
