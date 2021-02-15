@@ -21,7 +21,9 @@
             <div class="container">
                 <a class="navbar-brand" href="#"><img src="asset/img/logo-nav.png" alt=""></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <div class="hamburger-line"></div>
+                    <div class="hamburger-line"></div>
+                    <div class="hamburger-line"></div>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav ms-auto">
@@ -114,22 +116,22 @@
                     <h1 class="fw-bold text-center" data-aos="zoom-in"><span class="text-red">#KARYASERU</span> Showcase</h1>
                     <p class="paragraf text-center mt-5" data-aos="zoom-in">Filter by Kategori:</p>
                     <div class="wrapper-kategori" data-aos="fade-up">
-                        <span class="kategori filter-active">Semua</span>
-                        <span class="kategori">Web Development</span>
-                        <span class="kategori">Internet of Things</span>
-                        <span class="kategori">Design</span>
-                        <span class="kategori">Photography</span>
-                        <span class="kategori">Videography</span>
-                        <span class="kategori">Komputer</span>
-                        <span class="kategori">Optic</span>
+                        <span class="kategori filter-active" data-filter="all">Semua</span>
+                        <span class="kategori" data-filter="web">Web Development</span>
+                        <span class="kategori" data-filter="iot">Internet of Things</span>
+                        <span class="kategori" data-filter="design">Design</span>
+                        <span class="kategori" data-filter="photo">Photography</span>
+                        <span class="kategori" data-filter="video">Videography</span>
+                        <span class="kategori" data-filter="komputer">Komputer</span>
+                        <span class="kategori" data-filter="optic">Optic</span>
                     </div>
 
                     <!-- card karya -->
-                    <div class="row">
-                        <div class="col-lg-4 col-md-6 my-4">
-                            <div class="card-karya border rounded-xl px-3 py-4">
+                    <div class="row container-karya">
+                        <div class="col-lg-4 col-md-6 my-4 card-karya" data-kategori="web">
+                            <div class=" border rounded-xl px-3 py-4">
                                 <h3 class="fs-5 fw-bold">Website Perpustakaan</h3>
-                                <p class="paragraf fs-6">Web Development</p>
+                                <p class="paragraf fs-6 mb-2">Web Development</p>
     
                                 <img src="asset/img/web-perpus.jpg" class="img-karya rounded-xl" alt="">
                                 <div class="d-flex justify-content-between my-3">
@@ -144,10 +146,10 @@
                             </div>
                         </div>
                         
-                        <div class="col-lg-4 col-md-6 my-4">
-                            <div class="card-karya border rounded-xl px-3 py-4">
+                        <div class="col-lg-4 col-md-6 my-4 card-karya" data-kategori="iot">
+                            <div class=" border rounded-xl px-3 py-4">
                                 <h3 class="fs-5 fw-bold">Door lock RFID</h3>
-                                <p class="paragraf fs-6">Internet of Things</p>
+                                <p class="paragraf fs-6 mb-2">Internet of Things</p>
     
                                 <img src="asset/img/doorlock.jpg" class="img-karya rounded-xl" alt="">
                                 <div class="d-flex justify-content-between my-3">
@@ -162,10 +164,10 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-4 col-md-6 my-4">
-                            <div class="card-karya border rounded-xl px-3 py-4">
+                        <div class="col-lg-4 col-md-6 my-4 card-karya" data-kategori="komputer">
+                            <div class=" border rounded-xl px-3 py-4">
                                 <h3 class="fs-5 fw-bold">Perakitan Komputer</h3>
-                                <p class="paragraf fs-6">Komputer</p>
+                                <p class="paragraf fs-6 mb-2">Komputer</p>
     
                                 <img src="asset/img/komputer.jpg" class="img-karya rounded-xl" alt="">
                                 <div class="d-flex justify-content-between my-3">
@@ -180,7 +182,60 @@
                             </div>
                         </div>
 
-                        
+                        <div class="col-lg-4 col-md-6 my-4 card-karya" data-kategori="optic">
+                            <div class=" border rounded-xl px-3 py-4">
+                                <h3 class="fs-5 fw-bold">Penyambungan kabel FO</h3>
+                                <p class="paragraf fs-6 mb-2">optic</p>
+    
+                                <img src="asset/img/optic.jpg" class="img-karya rounded-xl" alt="">
+                                <div class="d-flex justify-content-between my-3">
+                                    <p class="fw-bold">By. Refaya Jihad</p>
+                                    <div>
+                                        <a href="https://instagram.com"><img src="asset/img/icon/ig.svg" class="sosmed-icon mx-1" alt=""></a>
+                                        <a href="https://instagram.com"><img src="asset/img/icon/fb.svg" class="sosmed-icon mx-1" alt=""></a>
+                                        <a href="https://instagram.com"><img src="asset/img/icon/twt.svg" class="sosmed-icon mx-1" alt=""></a>
+                                    </div>
+                                </div>
+                                <a href="#" class="btn btn-red">Lihat Selengkapnya</a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 my-4 card-karya" data-kategori="iot">
+                            <div class=" border rounded-xl px-3 py-4">
+                                <h3 class="fs-5 fw-bold">Sensor deteksi Kebakaran</h3>
+                                <p class="paragraf fs-6 mb-2">Internet of Things</p>
+    
+                                <img src="asset/img/sensor.jpg" class="img-karya rounded-xl" alt="">
+                                <div class="d-flex justify-content-between my-3">
+                                    <p class="fw-bold">By. Humam</p>
+                                    <div>
+                                        <a href="https://instagram.com"><img src="asset/img/icon/ig.svg" class="sosmed-icon mx-1" alt=""></a>
+                                        <a href="https://instagram.com"><img src="asset/img/icon/fb.svg" class="sosmed-icon mx-1" alt=""></a>
+                                        <a href="https://instagram.com"><img src="asset/img/icon/twt.svg" class="sosmed-icon mx-1" alt=""></a>
+                                    </div>
+                                </div>
+                                <a href="#" class="btn btn-red">Lihat Selengkapnya</a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 my-4 card-karya" data-kategori="web">
+                            <div class=" border rounded-xl px-3 py-4">
+                                <h3 class="fs-5 fw-bold">Website profil Sekolah</h3>
+                                <p class="paragraf fs-6 mb-2">Web Development</p>
+    
+                                <img src="asset/img/profile.jpg" class="img-karya rounded-xl" alt="">
+                                <div class="d-flex justify-content-between my-3">
+                                    <p class="fw-bold">By. Humam</p>
+                                    <div>
+                                        <a href="https://instagram.com"><img src="asset/img/icon/ig.svg" class="sosmed-icon mx-1" alt=""></a>
+                                        <a href="https://instagram.com"><img src="asset/img/icon/fb.svg" class="sosmed-icon mx-1" alt=""></a>
+                                        <a href="https://instagram.com"><img src="asset/img/icon/twt.svg" class="sosmed-icon mx-1" alt=""></a>
+                                    </div>
+                                </div>
+                                <a href="#" class="btn btn-red">Lihat Selengkapnya</a>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </section>

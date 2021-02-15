@@ -62,6 +62,35 @@ header {
 .navbar {
     transition: .2s;
 }
+.navbar-toggler {
+    display: flex;
+    flex-direction: column;
+    height: 28px;
+    justify-content: space-between;
+    border: none;
+}
+.navbar-toggler:focus {
+    border: none;
+    box-shadow: none;
+}
+.hamburger-line {
+    width: 32px;
+    height: 3px;
+    background-color: red;
+    transition: .7s;
+}
+
+.navbar-toggler.active .hamburger-line:nth-child(1) {
+    transform: rotateZ(45deg) translate(-2px, 14px);
+}
+
+.navbar-toggler.active .hamburger-line:nth-child(2) {
+    transform: translateX(200px);
+}
+
+.navbar-toggler.active .hamburger-line:nth-child(3) {
+    transform: rotateZ(-45deg) translate(-3px, -15px);
+}
 
 .nav-link {
     position: relative;
@@ -91,6 +120,23 @@ header {
 
 section {
     margin: 100px 0;
+}
+
+.card-karya {
+    animation: fade-in .7s;
+}
+
+@keyframes fade-in {
+    from{
+        /* transform: translateY(200px); */
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        /* transform: translateY(0); */
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 .wrapper-kategori {

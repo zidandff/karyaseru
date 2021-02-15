@@ -7,9 +7,10 @@ document.addEventListener('scroll', ()=> {
         navbar.classList.remove("scroll")
     }
 })
-
-document.querySelector(".navbar-toggler").addEventListener('click', ()=> {
+const navToggler = document.querySelector(".navbar-toggler");
+navToggler.addEventListener('click', ()=> {
     navbar.classList.add("scroll")
+    navToggler.classList.toggle("active")
 })
 
 const navLinks = document.querySelectorAll('.nav-link')
@@ -18,6 +19,36 @@ const section = navLinks.forEach((target)=> {
         return this.getAttribute("href");
     })
 })
+
+// filter kategori karya
+const karyaCards = document.querySelectorAll(".card-karya")
+const containerKarya = document.querySelector(".container-karya")
+
+const btnFilter = document.querySelectorAll(".kategori")
+btnFilter.forEach( btn => {
+    btn.addEventListener("click", function(){
+        // ubah style ke filter yang aktif
+        btnFilter.forEach( btn => btn.classList.remove("filter-active") )
+        this.classList.add("filter-active")
+
+        const strKategori = this.dataset.filter
+        const filtered = Array.from(karyaCards)
+            .filter( card => {
+                if(strKategori == "all"){
+                    return card
+                }
+                else {
+                    return card.dataset.kategori == strKategori
+                }
+            })
+            .map( card => card.outerHTML )
+
+        containerKarya.innerHTML = filtered.join("")
+    })
+} )
+
+
+
 
 // AOS Initialization
 AOS.init({
