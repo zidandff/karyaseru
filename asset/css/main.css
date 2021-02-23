@@ -126,6 +126,10 @@ section {
     animation: fade-in .7s;
 }
 
+.error-img {
+    animation: fade-in .7s;
+}
+
 @keyframes fade-in {
     from{
         /* transform: translateY(200px); */
