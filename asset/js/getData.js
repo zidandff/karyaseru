@@ -3,7 +3,7 @@ async function renderKarya(){
     updateUI(karya)
 }
 renderKarya()
-
+// filter karya
 const btnFilter = document.querySelectorAll(".kategori")
 btnFilter.forEach( btn => {
     btn.addEventListener("click", async function(){
@@ -72,11 +72,9 @@ function compCard({title, creator, category, coverImage}){
             <p class="fw-bold">By. ${creator}</p>
             <div>
                 <a href="https://instagram.com"><img src="asset/img/icon/ig.svg" class="sosmed-icon mx-1" alt=""></a>
-                <a href="https://instagram.com"><img src="asset/img/icon/fb.svg" class="sosmed-icon mx-1" alt=""></a>
-                <a href="https://instagram.com"><img src="asset/img/icon/twt.svg" class="sosmed-icon mx-1" alt=""></a>
             </div>
         </div>
-        <a href="#" class="btn btn-red">Lihat Selengkapnya</a>
+        <button data-bs-toggle="modal" data-bs-target="#detailModal" class="btn btn-red btn-detail">Lihat Selengkapnya</button>
     </div>
 </div>`
 }

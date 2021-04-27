@@ -1,5 +1,5 @@
+// change navbar color on scroll
 const navbar = document.querySelector(".navbar")
-
 document.addEventListener('scroll', ()=> {
     if( pageYOffset > 80 ){
         navbar.classList.add("scroll")
@@ -7,7 +7,7 @@ document.addEventListener('scroll', ()=> {
         navbar.classList.remove("scroll")
     }
 })
-
+// change navbar color when toggler on click
 const navToggler = document.querySelector(".navbar-toggler");
 navToggler.addEventListener('click', ()=> {
     navbar.classList.add("scroll")
@@ -41,3 +41,37 @@ var scroll = new SmoothScroll('a[href*="#"]', {
         }
     }
 });
+const slideThumbs = document.querySelector('.gallery-thumbs');
+const imgTop = document.querySelector('.gallery-top');
+// Gallery slide
+const galleryThumbs = new Swiper('.gallery-thumbs', {
+    spaceBetween: 10,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+})
+const galleryTop = new Swiper('.gallery-top', {
+    spaceBetween: 10,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    thumbs: {
+        swiper: galleryThumbs
+    }
+});
+
+document.addEventListener('click', e => {
+    if(e.target.classList.contains('btn-detail')){
+        setTimeout(() => {
+            galleryThumbs.update() ;
+            galleryTop.update()
+            
+        }, 500);
+    }        
+})
+
+
+
+
