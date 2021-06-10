@@ -6,7 +6,7 @@
             "creator" : "Zidan M. Daffa",
             "deskripsi" : "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam consequatur dolore dicta repellat quaerat facilis! Quia labore inventore cum quod, laboriosam similique odit vitae corporis! Beatae doloribus cum officia voluptatem, voluptatibus accusamus ad? Voluptatibus nulla odio amet nihil placeat deserunt a praesentium laudantium iusto! Odit alias nemo dolorum! Esse magnam fugiat aspernatur maxime architecto.",
             "category" : "Web Development",
-            "image" : "/asset/img/web-perpus.jpg"
+            "image" : "./asset/img/web-perpus.jpg"
         },
         {
             "id" : 2,
@@ -14,7 +14,7 @@
             "creator" : "M. Iqbal",
             "deskripsi" : "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam consequatur dolore dicta repellat quaerat facilis! Quia labore inventore cum quod, laboriosam similique odit vitae corporis! Beatae doloribus cum officia voluptatem, voluptatibus accusamus ad? Voluptatibus nulla odio amet nihil placeat deserunt a praesentium laudantium iusto! Odit alias nemo dolorum! Esse magnam fugiat aspernatur maxime architecto.",
             "category" : "Internet of Things",
-            "image" : "/asset/img/doorlock.jpg"
+            "image" : "./asset/img/doorlock.jpg"
         },
         {
             "id" : 3,
@@ -22,7 +22,7 @@
             "creator" : "Refaya Jihad",
             "desc" : "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam consequatur dolore dicta repellat quaerat facilis! Quia labore inventore cum quod, laboriosam similique odit vitae corporis! Beatae doloribus cum officia voluptatem, voluptatibus accusamus ad? Voluptatibus nulla odio amet nihil placeat deserunt a praesentium laudantium iusto! Odit alias nemo dolorum! Esse magnam fugiat aspernatur maxime architecto.",
             "category" : "Komputer",
-            "image" : "/asset/img/komputer.jpg"
+            "image" : "./asset/img/komputer.jpg"
         },
         {
             "id" : 4,
@@ -30,7 +30,7 @@
             "creator" : "Refaya Jihad",
             "deskripsi" : "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam consequatur dolore dicta repellat quaerat facilis! Quia labore inventore cum quod, laboriosam similique odit vitae corporis! Beatae doloribus cum officia voluptatem, voluptatibus accusamus ad? Voluptatibus nulla odio amet nihil placeat deserunt a praesentium laudantium iusto! Odit alias nemo dolorum! Esse magnam fugiat aspernatur maxime architecto.",
             "category" : "Optic",
-            "image" : "/asset/img/optic.jpg"
+            "image" : "./asset/img/optic.jpg"
         },
         {
             "id" : 5,
@@ -38,7 +38,7 @@
             "creator" : "Humam",
             "deskripsi" : "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam consequatur dolore dicta repellat quaerat facilis! Quia labore inventore cum quod, laboriosam similique odit vitae corporis! Beatae doloribus cum officia voluptatem, voluptatibus accusamus ad? Voluptatibus nulla odio amet nihil placeat deserunt a praesentium laudantium iusto! Odit alias nemo dolorum! Esse magnam fugiat aspernatur maxime architecto.",
             "category" : "Internet of Things",
-            "image" : "/asset/img/sensor.jpg"
+            "image" : "./asset/img/sensor.jpg"
         },
         {
             "id" : 6,
@@ -46,7 +46,7 @@
             "creator" : "Erlangga",
             "deskripsi" : "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam consequatur dolore dicta repellat quaerat facilis! Quia labore inventore cum quod, laboriosam similique odit vitae corporis! Beatae doloribus cum officia voluptatem, voluptatibus accusamus ad? Voluptatibus nulla odio amet nihil placeat deserunt a praesentium laudantium iusto! Odit alias nemo dolorum! Esse magnam fugiat aspernatur maxime architecto.",
             "category" : "Web Development",
-            "image" : "/asset/img/profile.jpg"
+            "image" : "./asset/img/profile.jpg"
         }
         
     ]
