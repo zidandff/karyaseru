@@ -23,7 +23,7 @@ btnFilter.forEach( btn => {
 })
 
 function getDataKarya(){
-    return fetch('/asset/resource/karya.json')
+    return fetch('./asset/resource/karya.json')
             .then(response => {
                 if( !response.ok ){
                     throw new Error("Upss sepertinya web kami bermasalah, mohon tunggu")
