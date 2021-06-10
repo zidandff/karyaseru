@@ -41,36 +41,6 @@ var scroll = new SmoothScroll('a[href*="#"]', {
         }
     }
 });
-const slideThumbs = document.querySelector('.gallery-thumbs');
-const imgTop = document.querySelector('.gallery-top');
-// Gallery slide
-const galleryThumbs = new Swiper('.gallery-thumbs', {
-    spaceBetween: 10,
-    slidesPerView: 4,
-    freeMode: true,
-    watchSlidesVisibility: true,
-    watchSlidesProgress: true,
-})
-const galleryTop = new Swiper('.gallery-top', {
-    spaceBetween: 10,
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-    thumbs: {
-        swiper: galleryThumbs
-    }
-});
-
-document.addEventListener('click', e => {
-    if(e.target.classList.contains('btn-detail')){
-        setTimeout(() => {
-            galleryThumbs.update() ;
-            galleryTop.update()
-            
-        }, 500);
-    }        
-})
 
 
 

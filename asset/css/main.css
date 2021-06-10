@@ -184,10 +184,23 @@ section {
     border-radius: 18px 18px 0 0 !important;
 }
 .img-karya {
+    width: 100% ;
+    padding-top: 100%;
+    position: relative;
+}
+
+.img-karya img {
+    inset: 0;
+    position: absolute;
     width: 100%;
-    height: 270px;
+    height: 100%;
     object-fit: cover;
 }
+
+.img-cover {
+    width: 100%;
+}
+
 .btn-red {
     background-color: #FD2E2E;
     color: #ffffff;
@@ -289,8 +302,15 @@ footer {
     }
 }
 
-@media(max-width: 575.98px){
+@media(max-width: 767.98px){
     .navbar-brand img {
         width: 120px;
+    }
+
+    .card-karya .img-cover {
+        width: 40%;
+    }
+    .card-content {
+        width: 60%;
     }
 }

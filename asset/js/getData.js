@@ -61,20 +61,55 @@ function displayError(error){
     </div>`
 }
 
-function compCard({title, creator, category, coverImage}){
+function compCard({title, creator, category, image, id}){
     return `<div class="col-lg-4 col-md-6 my-4 card-karya">
-    <div class=" border rounded-xl px-3 py-4">
-        <h3 class="fs-5 fw-bold">${title}</h3>
-        <p class="paragraf fs-6 mb-2">${category}</p>
-
-        <img src="${coverImage}" class="img-karya rounded-xl" alt="">
-        <div class="d-flex justify-content-between my-3">
-            <p class="fw-bold">By. ${creator}</p>
-            <div>
-                <a href="https://instagram.com"><img src="asset/img/icon/ig.svg" class="sosmed-icon mx-1" alt=""></a>
+    <div class=" border rounded-xl px-3 py-4 d-flex flex-row flex-md-column">
+        <div class="img-cover">
+            <div class="img-karya">
+                <img src="${image}" class="rounded-xl " alt="">
             </div>
         </div>
-        <button data-bs-toggle="modal" data-bs-target="#detailModal" class="btn btn-red btn-detail">Lihat Selengkapnya</button>
+        <div class="ps-3 ps-md-0 card-content">
+            <h3 class="fs-5 fw-bold mt-0 mt-md-4">${title}</h3>
+            <p class="paragraf fs-6 mb-2">${category}</p>
+
+            <div class="d-flex justify-content-between my-3">
+                <p class="fw-bold">By. ${creator}</p>
+                <div>
+                    <a href="https://instagram.com"><img src="asset/img/icon/ig.svg" class="sosmed-icon mx-1" alt=""></a>
+                </div>
+            </div>
+            <button data-bs-toggle="modal" data-bs-target="#detailModal" data-idcard="${id}" class="btn btn-red btn-detail">Lihat Selengkapnya</button>
+        </div>
     </div>
 </div>`
+}
+
+document.addEventListener('click', async e => {
+    if(e.target.classList.contains('btn-detail')){
+        const indexKarya = e.target.dataset.idcard;
+        let karya = await getDataKarya();
+        karya = karya[e.target.dataset.idcard - 1];
+
+        const modalBody = document.querySelector('.modal-detail');
+        modalBody.innerHTML = modalComp(karya);
+    }
+})
+
+function modalComp({title, creator, category, image}){
+    return `<div class="col-lg-7 col-md-6">
+        <img src="${image}" class="img-fluid" alt="">
+    </div>
+
+    <div class="col-lg-5 col-md-6">
+        <h1>${title}</h1>
+        <span class="text-muted">${category}</span>
+        <div class="d-flex  my-4">
+            <p class="fw-bold me-4">${creator}</p>
+            <a href="https://instagram.com"><img src="asset/img/icon/ig.svg" class="sosmed-icon mx-1" alt=""></a>
+            
+        </div>
+        
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto amet nam at neque adipisci dicta sed sit laboriosam, quaerat incidunt maxime ea possimus enim explicabo? Amet alias soluta, provident nihil asperiores impedit dicta officia, voluptatibus distinctio eum delectus aperiam, deserunt minus quasi dolor voluptate autem maxime officiis nisi repellendus quos voluptas earum at beatae! Cupiditate quasi cum ratione pariatur excepturi tempore animi, ea vel in, dolore rerum fugiat iste? Assumenda, ratione inventore! Fuga, alias a nobis sapiente sint.</p>
+    </div>`
 }
