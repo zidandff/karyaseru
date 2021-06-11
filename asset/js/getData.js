@@ -35,7 +35,7 @@ function getDataKarya(){
 
 function updateUI(dataKarya){
     let cards = ""
-    dataKarya.forEach(karya => cards += compCard(karya))
+    dataKarya.forEach(karya => cards += cardComponent(karya))
     const containerCard = document.querySelector('.container-karya')
     containerCard.innerHTML = cards
 }
@@ -61,16 +61,28 @@ function displayError(error){
     </div>`
 }
 
-function compCard({title, creator, category, image, id}){
-    return `<div class="col-lg-4 col-md-6 my-4 card-karya">
-    <div class=" border rounded-xl px-3 py-4 d-flex flex-row flex-md-column">
+document.addEventListener('click', async e => {
+    if(e.target.classList.contains('btn-detail')){
+        const indexKarya = e.target.dataset.idcard;
+        let karya = await getDataKarya();
+        karya = karya[e.target.dataset.idcard - 1];
+
+        const modalBody = document.querySelector('.modal-detail');
+        modalBody.innerHTML = modalComp(karya);
+    }
+})
+
+// === COMPONENT === //
+function cardComponent({title, creator, category, image, id}){
+    return `<div class="col-lg-4 col-md-6 my-4 card-karya-wrapper">
+    <div class=" border rounded-xl px-3 py-4 ">
         <div class="img-cover">
             <div class="img-karya">
                 <img src="${image}" class="rounded-xl " alt="">
             </div>
         </div>
-        <div class="ps-3 ps-md-0 card-content">
-            <h3 class="fs-5 fw-bold mt-0 mt-md-4">${title}</h3>
+        <div class=" card-content">
+            <h3 class="fs-5 fw-bold mt-4">${title}</h3>
             <p class="paragraf fs-6 mb-2">${category}</p>
 
             <div class="d-flex justify-content-between my-3">
@@ -85,23 +97,12 @@ function compCard({title, creator, category, image, id}){
 </div>`
 }
 
-document.addEventListener('click', async e => {
-    if(e.target.classList.contains('btn-detail')){
-        const indexKarya = e.target.dataset.idcard;
-        let karya = await getDataKarya();
-        karya = karya[e.target.dataset.idcard - 1];
-
-        const modalBody = document.querySelector('.modal-detail');
-        modalBody.innerHTML = modalComp(karya);
-    }
-})
-
 function modalComp({title, creator, category, image}){
-    return `<div class="col-lg-7 col-md-6">
-        <img src="${image}" class="img-fluid" alt="">
+    return `<div class="col-lg-7 col-md-10">
+        <img src="${image}" class="img-fluid rounded-xl" alt="">
     </div>
 
-    <div class="col-lg-5 col-md-6">
+    <div class="col-lg-5 col-md-10 mt-4 mt-lg-0">
         <h1>${title}</h1>
         <span class="text-muted">${category}</span>
         <div class="d-flex  my-4">
